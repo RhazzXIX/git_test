@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <title>Fizz Buzz numbers</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <script>
+            let num = Number(prompt('Enter number for end of Fizz Buzz:'));
+
+            for (let i = 1; i <= num; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log('FizzBuzz');
+            } else if (i % 5 === 0) {
+                console.log('Buzz');
+            } else if (i % 3 === 0) {
+                console.log('Fizz');
+            } else (console.log(i));
+            }
+            
+
+
+
+        </script>
+    </body>
+</html>
+
+Innitial completion of Rock Paper Scissors
+
+Made game fucntion, for playing 5 rounds of the game
+Made a confirm function for the user if they want to play the game
+Made an alert for the scoreboard for the user to know what the score is.
+Polished the pChoice function for setting the user choice into the variable
+Made a retry function to retry the game and reset the scoreboard.
