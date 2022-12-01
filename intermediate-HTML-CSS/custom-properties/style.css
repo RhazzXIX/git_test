@@ -1,0 +1,25 @@
+:root {
+    font-size: 16px;
+    --color-error-text: red;
+    --modal-border: 1px solid black;
+    --modal-font-size: calc(2rem + 5vw);
+}
+
+* {
+    margin: 0;
+    padding: 0px;
+}
+
+body {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    text-align: center;
+    color: var(--color-error-text);
+    border: var(--modal-border);
+    font-size: var(--modal-font-size);
+}
+

@@ -1,0 +1,76 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+:root{
+    font-size: 16px;
+}
+
+body{
+    padding: 10px;
+}
+
+form#message {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+form#message 
+ul {
+    list-style: none;
+}
+
+form#message li + li {
+    margin-top: 1em;
+}
+
+form#message label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+
+form#message input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    padding: 0 3px;
+}
+
+form#message 
+input:focus,
+textarea:focus {
+    border-color: #000;
+}
+
+form#message 
+textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+form#message 
+.button {
+    padding-left: 90px;
+}
+
+form#message 
+button {
+    margin-left: 0.5em;
+}
+
+form#juiceSize, form#fruitTaste{
+    margin-top: 20px;
+    width: 200px;
+}
+
+form#juiceSize label,
+form#fruitTaste label{
+    font-size: 1.2rem;
+}

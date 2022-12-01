@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form (Active Learning)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="java.js" method="post">
+        <h1>Payment form</h1>
+        <p>
+            Required fields are followed by 
+            <strong><span aria-label="required">*</span></strong>.
+        </p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>
+                    <h3>Title</h3>
+                </legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" name="title" id="title_1" value="K"/>
+                            King
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" name="title" id="title_2" value="Q"/>
+                            Queen
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_3">
+                            <input type="radio" name="title" id="title_3" value="J"/>
+                            Joker
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="name">
+                    <span>Name: </span>
+                    <strong><span arial-label="required">*</span></strong>
+                </label>
+                <input type="text" name="username" id="name"/>
+            </p>
+            <p>
+                <label for="mail">
+                    <span>E-mail: </span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="email" name="usermail" id="mail"/>
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password: </span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="text" id="pwd" name="userpassword">
+            </p>
+        </section>
+    </form>
+    
+</body>
+</html>

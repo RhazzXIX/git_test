@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./data.js" defer></script>
+</head>
+<body>
+    <form action="./data.js" method="post">
+        <fieldset>
+            <legend>Contact Details</legend>
+
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" placeholder="&quot;Commuter&quot;">
+
+            <label for="user_email">Email Address:</label>
+            <input type="email" name="email" id="user_email" placeholder="&quot;you@example.com&quot;">
+
+            <label for="user_password">Password:</label>
+            <input type="password" name="password" id="user_password">
+
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" id="amount">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" name="dob" id="dob">
+
+            <textarea name="" id="" cols="30" rows="10">Form Basics</textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cars</legend>
+            <select name="car">
+                <option value="none" selected>Please Select</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="tesla">Tesla</option>
+                <option value="volvo">Volvo</option>
+                <option value="bmw">BMW</option>
+                <option value="mini">Mini</option>
+                <option value="ford">Ford</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Fashion</legend>
+            <select name="fashion">
+                <option value="none">Please Select</option>
+                <optgroup label="Clothing">
+                    <option value="t_shirt">T-shirts</option>
+                    <option value="sweater">Sweaters</option>
+                    <option value="coats">Coats</option>
+                </optgroup>
+                <optgroup label="Foot Wear">
+                    <option value="sneaker">Sneakers</option>
+                    <option value="boots">Boots</option>
+                    <option value="sandals">Sandals</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend><h1>Ticket Type</h1></legend>
+            <div>
+                <input type="radio" name="ticket_type" id="child" value="child">
+                <label for="child">Child</label>
+            </div>
+            <div>
+                <input type="radio" name="ticket_type" id="adult" value="adult">
+                <label for="adult">Adult</label>
+            </div>
+            <div>
+                <input type="radio" name="ticket_type" id="senior" value="senior">
+                <label for="senior">Senior</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                <h1>Pizza Toppings</h1>
+            </legend>
+            
+            <div>
+                <input type="checkbox" name="topping" id="sausage" value="sausage">
+                <label for="sausage">Sausage</label>
+            </div>
+            <div>
+                <input type="checkbox" name="topping" id="onions" value="onions">
+                <label for="onions">Onions</label>
+            </div>
+            <div>
+               <input type="checkbox" name="topping" id="pepperoni" value="pepperoni">
+               <label for="pepperoni">Pepperoni</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="topping" id="mushrooms" value="mushrooms">
+                <label for="mushrooms">Mushrooms</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <h3>News Letter</h3>
+            <input type="checkbox" name="news_letter" id="newsletter">
+            <label for="newsletter">Send me the news letter</label>
+        </fieldset>
+
+        <button type="submit" id="up-skill">Always Up-skilling</button>
+
+        <button type="reset" id="reset">Reset</button>
+
+        <button type="button" id="upSkill">Always Up-skilling</button>
+
+    </form>
+
+</body>
+</html>
