@@ -74,3 +74,12 @@ form#juiceSize label,
 form#fruitTaste label{
     font-size: 1.2rem;
 }
+
+form#hidden{
+    margin-top: 90px;
+}
+
+input[type=hidden]{
+    border: 1px solid black;
+    margin-bottom: 20git re0px;
+}

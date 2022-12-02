@@ -60,9 +60,42 @@
                     <span>Password: </span>
                     <strong><span aria-label="required">*</span></strong>
                 </label>
-                <input type="text" id="pwd" name="userpassword">
+                <input type="text" id="pwd" name="userpassword"/>
             </p>
         </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+                <label for="card">
+                    <span>Card type:</span>
+                </label>
+                <select name="usercard" id="card">
+                    <option value="visa">Visa</option>
+                    <option value="mv">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>Card Number:</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="tel" name="cardnumber" id="number"/>
+            </p>
+            <p>
+                <label for="expiration">
+                    <span>Expiration date:</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="text" name="cardexpiration" id="expiration" required="true" placeholder="MM/YY" pattern="^(0[1-9]1[0-2])\/(0-19]{2})$"/>
+            </p>
+        </section>
+        <section>
+            <p>
+                <button type="submit">Validate the payment</button>
+            </p>
+        </section>
+
     </form>
     
 </body>

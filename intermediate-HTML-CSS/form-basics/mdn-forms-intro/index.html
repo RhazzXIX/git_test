@@ -32,7 +32,7 @@
 
         <form action="./java.js" method="post" id="juiceSize">
             <fieldset>
-                <legend><h3>Fruit Juice Size</h3></legend>
+                <legend><h3>Input type Radio</h3></legend>
                 <p>
                     <input type="radio" name="size" id="size_1" value="small"/>
                     <label for="size_1">Small</label>
@@ -53,6 +53,7 @@
         <form action="java.js" method="post" id="fruitTaste">
 
             <fieldset>
+                <legend><h3>Input type checkbox</h3></legend>
                 <p>
                     <input type="checkbox" name="taste_cherry" id="taste_1" value="cherry"/>
                     <label for="taste_1">I like cherry</label>
@@ -66,8 +67,9 @@
             </fieldset>
 
         </form>
-        <form action="./java.js" method="post">
+        <form action="./java.js" method="post" style="margin-top:1.5rem ;">
             <fieldset>
+                <legend><h3>Accessability readability</h3></legend>
                 <p>Required fields are followed by <span aria-label="required">*</span>.</p>
                 <!-- <div>
                     <label for="username">Name:</label>
@@ -85,6 +87,28 @@
                     <label for="username">Name: <span aria-label="required">*</span></label>
                     <input id="username" type="text" name="username" />
                 </div>
+            </fieldset>
+        </form>
+
+        <form action="/java.js" method="post" id="hidden">
+
+            <fieldset>
+                <legend for="test">
+                    <h3>Input type Hidden</h3>
+                </legend>
+                <input type="hidden" name="timestamp"/>
+                <p id="test">test</p>
+            </fieldset>
+
+            <fieldset style="margin-top: 1.2rem;">
+                <legend><h3>Input type image</h3></legend>
+                <input type="image" src="./image/Site-logo.webp" alt="Digimon World Logo" width="80" height="auto"/>
+
+            </fieldset>
+
+            <fieldset style="margin-top: 1.5rem;">
+                <legend><h3>Input type file</h3></legend>
+                <input type="file" name="file" id="file" accept="image/*" multiple/>
             </fieldset>
         </form>
 
