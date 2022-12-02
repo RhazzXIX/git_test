@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Styling</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <div id="formStyle">
+        <form action="./java.js" method="post" id="postcard">
+        
+            <h1>to: Mozilla</h1>
+        
+              <div id="from">
+                <label for="name">from:</label>
+                <input type="text" name="user_name" id="name"/>
+              </div>
+              <div id="reply">
+                <label for="mail">reply:</label>
+                <input type="email" name="user_email" id="mail"/>
+              </div>
+              <div id="message">
+                <label for="msg">Your message:</label>
+                <textarea name="user_message" id="msg"></textarea>
+              </div>
+              <div class="button">
+                <button type="submit">Send your message</button>
+              </div>
+        </form>
+    </div>
+
+    <form action="./java.js" method="post" id="input-types" style="margin-top: 100px;">
+        <fieldset>
+            <legend>
+                <h3>Input Type Color</h3>
+            </legend>
+            <input type="color" name="color" id="color"/>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>Input type datetime-local</h3>
+            </legend>
+            <input type="datetime-local" name="date" id="date"/>
+        </fieldset>
+        <fieldset>
+            <legend>
+                <h3>input type range</h3>
+            </legend>
+            <input type="range" name="range" id="range" value="200"/>
+        </fieldset>
+        <fieldset>
+           
+            <input list="flavor" id="icecream" name="icecreamflavor">
+            <datalist id="flavor">
+               <option>Choco</option>
+               <option>Vanilla</option>
+               <option>Strawberry</option>
+            </datalist>
+            <legend>
+                <h3>input type datalist</h3>
+            </legend>
+        </fieldset>
+        <fieldset>
+           
+            <progress id="file" max="100" value="80">80%</progress>  
+            <meter style="margin-top: 30px;" id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="32">at 50/100</meter>
+
+            <input type="button" value="test"/>
+            <button type="button">lksdhfgl;kasdjf</button>
+            <legend>
+                <h3>display for progrsageess and meter</h3>
+            </legend>
+        </fieldset>
+        <button>test</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
