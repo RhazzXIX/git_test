@@ -1,0 +1,162 @@
+
+:root {
+    font-size: 20px;
+}
+
+
+/* input[type="search"] {
+    appearance: none;
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+span {
+    display: inline-block;
+    background: red;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    border: 1px solid gray;
+    vertical-align: -2px;
+    color: green;
+}
+
+input[type="checkbox"]::before {
+    content: "✔";
+    position: absolute;
+    font-size: 1.2em;
+    right: -1px;
+    top: -0.3em;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+    border-color: black;
+    background: #ddd;
+    color: gray;
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    vertical-align: -2px;
+    outline: none;
+}
+
+input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+} */
+
+form#hard div {
+    margin-top: 10px;
+}
+
+button,
+label,
+input,
+select,
+progress,
+meter {
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+}
+
+select {
+    appearance: none;
+}
+
+#selectwrapper {
+    position: relative;
+}
+
+#selectwrapper::after {
+    content: "⥥";
+    font-size: 1rem;
+    top: 4px;
+    right: 10px;
+    position: absolute;
+}
+
+form#hard input[type="range"] {
+    appearance: none;
+    background: rgb(255, 230, 0);
+    height: 2px;
+    padding: 3px;
+    outline: 1px solid transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+form#hard input[type="color"] {
+    border: 0;
+    padding: 0;
+}
+
+form#hard input[type="file"] {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+label[for="file"] {
+    box-shadow: 1px 1px 3px #ccc;
+    background: linear-gradient(to bottom, #eee, #ccc);
+    border: 1px solid rgb(169, 169, 169,);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+label[for="file"]:hover {
+    background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+label[for="file"]:active {
+    box-shadow: inset 1px 1px 3px #ccc;
+}
+
+form#hard label{
+    margin-top: 20px;
+}
