@@ -1,11 +1,11 @@
 :root {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 form {
-    margin-bottom: 26px;
-    width: 400px;
-    margin: auto;
+  margin-bottom: 26px;
+  width: 400px;
+  margin: auto;
 }
 
 fieldset{
@@ -16,149 +16,185 @@ fieldset > div {
     margin-bottom: 20px;
     display: flex;
     flex-flow: row wrap;
-}
+  }
 /* Styling required & optional */
 
- input:required {
+input:required {
     border: 1px solid black;   
 }
 
 input:optional {
-    border: 1px solid silver;
+  border: 1px solid silver;
 }
 
 input[type="text"]:hover, 
 input[type="email"]:hover {
     background-color: rgb(231, 231, 231);
-}
+  }
 
-input {
-    display: block;
-    width: 100%;
-    height: 1.5rem;
-    box-sizing: border-box;
-    box-shadow: inset 1px 1px 5px grey;
-    /* padding: 0 5px; */
-    border-radius: 5px;   
-}
-button {
+/* input {
+  display: block;
+  width: 100%;
+  height: 1.5rem;
+  box-sizing: border-box;
+  box-shadow: inset 1px 1px 5px grey;
+  padding: 0 5px;
+  border-radius: 5px;   
+} */
+  button {
     width: 60%;
     margin: 0 auto;
-    padding: 5px;
+    /* padding: 5px; */
     border-radius: 5px;
     display: block;
-}
-
-button:hover{
+  }
+  
+  button:hover{
     background-color: rgb(223, 223, 223);
-}
-
-
+  }
+  
+  
 /* Sytling controls based on whether their data is valid */
 
+/* input + span::before {
+  position: absolute;
+  
+}
 input + span::before {
-    position: absolute;
-
-  }
-  input + span::before {
-    position:absolute;
-    right: -20px;
-    top: 5px;
-  }
-
-  input:invalid {
-      border: 2px solid red;
-  }
-
-  input:invalid + span::before {
-      content: "✗";
-      color: red;
-    }
-
-    input:valid + span::before {
-        content: "✓";
-    color: green;
-  }
-
-  /* In-range and out-of-range data */
-
-  input:out-of-range + span::after {
-      color: white;
-    background-color: red;
-    width: 155px;
-    content: "Outside allowable value range";
-    left: -176px;
+  position:absolute;
+  right: -20px;
+  top: 5px;
 }
 
-  /* Styling enabled and disabed inputs, and read-only and read-write */
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✗";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+} */
+
+/* Using generated content with pseudo-classes */
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -23px;
+  left: -58px;
+  border-radius: 5px;
+}
+
+/* In-range and out-of-range data */
+
+input:out-of-range + span::after {
+  color: white;
+  background-color: red;
+  width: 155px;
+  content: "Outside allowable value range";
+  left: -176px;
+}
+
+/* Styling enabled and disabed inputs, and read-only and read-write */
+
+input[type="text"]:disabled {
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+.disabled-label {
+    color: #aaa;
+}
+
+:is(input:read-only, input:-moz-read-only, 
+textarea:-moz-read-only, textarea:read-only) {
+  border: 0;
+  box-shadow: none;
+}
+
+:is(textarea:-moz-read-write, textarea:read-write) {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Radio and checkbox states - checked, default, indeterminate */
+
+input[type="radio"] {
+width: 20px;
+height: 20px;
+border-radius: 10px;
+border: 2px solid gray;
+vertical-align: -2px;
+outline: none;
+} 
+
+input[type="radio"] {
+    appearance: none;
+}
+input[type="radio"]::before {
+  display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 6px;
+  background-color: red;
+  font-size: 1.3em;
+  transform: translate(3px, 3px) scale(0);
+  transform-origin: center;
+  transition: all 0.3s ease-in; 
+}
   
-  input[type="text"]:disabled {
-      background: #eee;
-      border: 1px solid #ccc;
+input[type="radio"]:checked::before {
+  transform: translate(3px, 3px) scale(1);
+  transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
+}
+    
+input ~ span {
+  position: relative;
+}
+
+input:default ~ span::after {
+  font-size: 0.7rem;
+  position: absolute;
+  content: "Default";
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  right: -65px;
+  top: -3px;
+  border-radius: 5px;
+}
+
+input[type="radio"]:indeterminate {
+  border: 2px solid red;
+  animation: 0.4s linear infinite alternate border-pulse;
+}
+
+@keyframes border-pulse {
+  from {
+    border: 2px solid red;
   }
 
-  .disabled-label {
-      color: #aaa;
+  to {
+    border: 6px solid red;
   }
   
-  :is(input:read-only, input:-moz-read-only, 
-  textarea:-moz-read-only, textarea:read-only) {
-    border: 0;
-    box-shadow: none;
-  }
-  
-  :is(textarea:-moz-read-write, textarea:read-write) {
-    box-shadow: inset 1px 1px 3px #ccc;
-    border-radius: 5px;
-    resize: none;
-  }
+}
 
-  /* Radio and checkbox states - checked, default, indeterminate */
-  
-    input[type="radio"] {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    border: 2px solid gray;
-    vertical-align: -2px;
-    outline: none;
-    } 
-    
-    input[type="radio"] {
-        appearance: none;
-    }
-    input[type="radio"]::before {
-        display: block;
-        content: " ";
-        width: 10px;
-        height: 10px;
-        border-radius: 6px;
-        background-color: red;
-        font-size: 1.3em;
-        transform: translate(3px, 3px) scale(0);
-        transform-origin: center;
-        transition: all 0.3s ease-in; 
-      }
-      
-      input[type="radio"]:checked::before {
-        transform: translate(3px, 3px) scale(1);
-        transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
-      }
-    
-      /* Using generated content with pseudo-classes */
-    
-      input + span {
-        position: relative;
-      }
-    
-      input:required + span::after {
-        font-size: 0.7rem;
-        position: absolute;
-        content: "required";
-        color: white;
-        background-color: black;
-        padding: 5px 10px;
-        top: -23px;
-        left: -58px;
-        border-radius: 5px;
-      }
+input:placeholder-shown {
+  font-style: italic;
+}
