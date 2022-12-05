@@ -1,0 +1,13 @@
+input:invalid {
+    border: 2px dashed red;
+    box-shadow: inset 1px 1px 3px rgb(248, 186, 186);
+}
+
+input:valid {
+    border: 2px solid black;
+    box-shadow: inset 1px 1px 3px grey;
+}
+
+input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+}

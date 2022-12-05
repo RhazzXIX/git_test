@@ -1,0 +1,20 @@
+form div {
+    margin: 20px;
+}
+
+input:valid +
+span.required::after {
+    content: "✓";
+    color: green;
+}
+
+input:invalid, 
+textarea:invalid {
+    border-color: red;
+}
+
+input:valid, 
+textarea:valid {
+    border: 1px solid green;
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="java.js" defer></script>
+</head>
+<body>
+    <!-- Required Validation -->
+    <form action="" method="get" class="required">
+        <div>
+            <label for="email">Email: <span aria-label="required">*</span></label>
+            <input type="email" name="email" id="email"  required placeholder="user@email.com" /> 
+            <span class="required"></span>
+        </div>
+        <div><label for="password">Password: <span aria-label="required">*</span></label>
+            <input type="password" name="password" id="password" required />
+            <span class="required"></span>
+        </div>
+        <div><button>Submit</button></div>
+    </form>
+    <!-- Text Length Validation -->
+    <form action="" method="get" class="length">
+        <div class="length">
+            <textarea name="length" id="length" minlength="3" maxlength="20">What's happening?</textarea>
+        </div>
+        <button type="submit">Tweet</button>
+    </form>
+    <form action="" method="get" class="combined">
+        <div>
+            <textarea name="combined" id="combine" cols="30" rows="10" minlength="5" maxlength="20" required></textarea>
+        </div>
+        <button type="submit">Twwet!</button>
+    </form>
+    <!-- Number Range Validation -->
+    <form action="" method="get" class="range">
+        <div>
+            <label for="quantity">Quantity: </label>
+            <input type="number" name="quantity" id="quantity" min="10" max="100" value="0" />
+            <span class="required"></span>
+        </div>
+        <button type="submit">Place order</button>
+    </form>
+    <form action="" method="get" class="pattern">
+        <div>
+            <label for="zip_code">Postal / Zip Code: </label>
+            <input type="text" name="zip_code" id="zip_code" pattern="(\d{5}([\-]\d{4})?)" title="Please enter a valid zip code , ex: 65251" placeholder="ex: 65251" required />
+            <span class="required"></span>
+        </div>
+        
+        <label for="website">Website: 
+            <input type="url" name="website" id="website" />
+            <span class="required"></span>
+        </label>
+        <button type="submit">Send</button>
+    </form> 
+</body>
+</html>
