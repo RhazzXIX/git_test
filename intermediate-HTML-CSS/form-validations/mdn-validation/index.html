@@ -7,10 +7,64 @@
         <script src="java.js" defer></script>
     </head>
     <body>
-        <form action="" method="get">
-            <label for="choose">Would you prefer a banana or cherry? (required)</label>
-            <input id="choose" name="i-like" required pattern="[Bb][Aa][Nn][Aa][Nn][Aa]|[Cc][Hh][Ee][Rr]*[Yy]" title="Please enter banana or cherry"/>
-            <button>Submit</button>
+        <form action="" method="get" class="pattern">
+            <fieldset>
+                <label for="choose">Would you prefer a banana or cherry? (required)</label>
+                <input id="choose" name="i-like" required pattern="[Bb][Aa][Nn][Aa][Nn][Aa]|[Cc][Hh][Ee][Rr]*[Yy]" title="Please enter banana or cherry"/>
+                <button>Submit</button>
+            </fieldset>
         </form>
+        <form action="" method="get" class="length">
+            <fieldset>
+                <div>
+                    <label for="choose">Would you prefer a banana or cherry? (required)</label>
+                    <input id="choose" name="i-like" required minlength="6" maxlength="6" title="Please enter banana or cherry"/>
+                </div>
+                <div>
+                    <label for="number">How many would you like?</label>
+                    <input type="number" name="amount" id="number" value="1" min="1" max="10" />
+                </div>
+                <button>Submit</button>
+
+            </fieldset>
+        </form>
+        
+        <form action="" method="get" class="full">
+
+            <p>
+                <fieldset>
+                    <legend>Do you have a drive's license? <span aria-label="required">*</span></legend>
+                    <input type="radio" name="driver" required id="r1" value="yes" />
+                    <label for="r1">yes</label>
+                    <input type="radio" name="driver" id="r2" required value="no" />
+                    <label for="r2">No</label>
+                </fieldset>
+            </p>
+            <p>
+                <label for="n1">How old are you?</label>
+                <input type="number" name="age" id="n1" min="12" max="120" step="1" pattern="\d+" />
+            </p>
+            <p>
+                <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
+                <input type="text" name="fruit" id="t1" list="l1" required pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range" />
+                <datalist id="l1">
+                    <option>Banana</option>
+                    <option>Cherry</option>
+                    <option>Apple</option>
+                    <option>Strawberry</option>
+                    <option>Lemon</option>
+                    <option>Orange</option>
+                </datalist>
+            </p>
+            <p>
+                <label for="t2">What's your e-mail address</label>
+                <input type="email" name="email" id="t2">
+            </p>
+            <p>
+                <label for="t3">Leave a short message</label>
+                <textarea name="msg" id="t3" maxlength="140" rows="5"></textarea>
+            </p>
+            <p><button>Submit</button></p>
+        </form>
+        
     </body>
-</html>

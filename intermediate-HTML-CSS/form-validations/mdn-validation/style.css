@@ -11,3 +11,47 @@ input:valid {
 input:invalid:required {
     background-image: linear-gradient(to right, pink, lightgreen);
 }
+
+form {
+    margin: 10px auto;
+}
+
+form.full{
+    font: 1em sans-serif;
+    max-width: 320px;
+    border: 1px solid gray;
+}
+form.full p > label{
+    display: block;
+}
+
+form.full input[type='text'],
+form.full input[type='email'],
+form.full input[type='number'],
+form.full textarea,
+form.full fieldset {
+    width: 100%;
+    border: 1px solid #333;
+    box-sizing: border-box;
+}
+
+form.full textarea {
+    resize: none;
+}
+form.full input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+form.full input:focus:invalid {
+    box-shadow: none;
+}
+
+form.full button {
+    padding: 16px 42px;
+    border-radius: 5px;
+    margin: auto;
+}
+form.full p button {
+    display: block;
+    margin: 0px auto;
+}
