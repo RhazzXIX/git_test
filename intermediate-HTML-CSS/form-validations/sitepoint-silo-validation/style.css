@@ -1,0 +1,285 @@
+/* sitepoint validatin guide */
+form {
+    margin: 18px;
+}
+
+input[type='number']::placeholder {
+    color: aquamarine;
+}
+
+/* Silo validation Guide */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, button , input, select, textarea {
+    font-family: 'Courier New', Courier, monospace;
+    color: #666666;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0  ;
+    max-width: 100%;
+    vertical-align: baseline;
+}
+
+textarea, input {
+    outline: none;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+.silo {
+    width: 100%;
+    max-width: 760px;
+    margin: 30px auto;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+}
+
+h1 {
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.silo input[type="text"], 
+.silo input[type="email"], 
+.silo input[type="url"], 
+.silo textarea {
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    padding: 24px 10px 12px;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="url"], 
+textarea {
+    background-color: #fff;
+    padding: 24px 10px 12px;
+    font-size: 16px;
+    font-size: 1rem;
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+:focus {
+    outline: 0;
+}
+
+/*Animations*/
+@-webkit-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@-moz-keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+@keyframes silo-fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.4em);
+        -moz-transform: translateY(-1.4em);
+        -ms-transform: translateY(-1.4em);
+        -o-transform: translateY(-1.4em);
+        transform: translateY(-1.4em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes silo-help {
+    0% {
+        opacity: 0;
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.silo label {
+    padding: 5px 0;
+    font-size: 14px;
+    font-size: 0.75rem;
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 26px;
+    color: #8BC34A;
+    -webkit-animation: silo-fade 0.2s;
+    -moz-animation: silo-fade 0.2s;
+    animation: silo-fade 0.2s;
+    max-width: 80%;
+}
+
+.silo input:focus + label,
+.silo input[required]:valid + label,
+.silo input:not(:placeholder-shown) + label,
+.silo textarea:focus + label,
+.silo textarea:valid + label,
+.silo textarea:not(:placeholder-shown) + label {
+    display: block;
+}
+
+.silo input:invalid,
+.silo textarea:invalid {
+    border: 1px solid #b92326;
+    background-color: rgba(185, 35, 38, 0.25);
+}
+.silo input:invalid + label,
+.silo textarea:invalid + label {
+    color: #b92326;
+}
+.silo input:invalid + label,
+.silo textarea:invalid + label {
+    color: #b92326;
+}
+.silo input:focus:invalid + label:after,
+.silo textarea:focus:invalid + label:after {
+    content: " (" attr(data-help) ")";
+    animation: silo-help 100s;
+}
+.silo input:invalid + label:after,
+.silo textarea:invalid + label:after {
+    content: " (" attr(data-help) ")";
+}
+.silo input:valid,
+.silo textarea:valid {
+    border: 1px solid #8BC34A;
+    background-color: rgba(139, 195, 74, 0.25);
+}
+.silo input:focus:valid,
+.silo textarea:focus:valid {
+    border: 1px solid #8BC34A;
+    background-color: transparent;
+}
+.silo input:valid + label,
+.silo textarea:valid + label {
+    color: #8BC34A;
+}
+.silo input:placeholder-shown,
+.silo textarea:placeholder-shown {
+    background-color: transparent;
+    border: 1px solid #d8d8d8;
+}
+.silo input::placeholder,
+.silo textarea::placeholder {
+    color: #d8d8d8;
+}
+.silo input::-webkit-input-placeholder,
+.silo textarea::-webkit-input-placeholder {
+    color: #d8d8d8;
+}
+.silo input:-ms-input-placeholder,
+.silo textarea:-ms-input-placeholder {
+    color: #d8d8d8;
+}
+.silo input::-moz-placeholder,
+.silo textarea::-moz-placeholder {
+    color: #d8d8d8;
+}
+.silo input:focus::placeholder,
+.silo textarea:focus::placeholder {
+    color: transparent;
+}
+.silo input:focus::-webkit-input-placeholder,
+.silo textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+.silo input:focus:-ms-input-placeholder,
+.silo textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+.silo input:focus::-moz-placeholder,
+.silo textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+.silo input[type="submit"] {
+    background-color: transparent;
+    border: 1px solid #8BC34A;
+    color: #8BC34A;
+    padding: 5px 15px;
+    font-size: 16px;
+    font-size: 1rem;
+    margin: 15px auto;
+    vertical-align: middle;
+    display: block;
+    cursor: pointer;
+}
+.silo input[type="submit"]:hover {
+    background-color: rgba(139, 195, 74, 0.25);
+    border: 1px solid #8BC34A;
+}

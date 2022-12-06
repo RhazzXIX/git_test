@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sitepoint Validation Guide</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="java.js" defer></script>
+    </head>
+    <body>
+        <form action="" method="get" class="site-point">
+            <input type="text" name="test" id="test" inputmote="numeric"  autocorrect/>
+            <input type="number" name="number" id="number" min="1" max="100" placeholder="25" required />
+            <div><button formnovalidate>Submit</button></div>
+        </form>
+        
+        <h1>Write your comment!</h1>
+        <form action="" method="get" class="silo">
+            <div class="comment-form-name">
+                <input type="text" name="fname" id="fname" placeholder="First Name *" required />
+                <label for="fname">Name</label>
+            </div>
+            <div class="comment-form-surname">
+                <input type="text" name="lname" id="lname" placeholder="Surname *" required />
+                <label for="lname">Surname</label>
+            </div>
+            <div class="comment-form-email">
+                <input type="email" name="email" id="email" placeholder="user@example.com *" required />
+                <label for="email">Email</label>
+            </div>
+            <div class="comment-form-website">
+                <input type="url" name="website" id="website" placeholder="Website"/>
+                <label for="website">Website</label>
+            </div>
+            <div class="comment-form-comment">
+                <textarea name="comment" id="commect" cols="30" rows="10" placeholder="Comment *"></textarea>
+                <label for="comment">Comment</label>
+            </div>
+            <div class="form-submit"><button>Post Comment</button></div>
+        </form>
+        
+    </body>
+</html>
