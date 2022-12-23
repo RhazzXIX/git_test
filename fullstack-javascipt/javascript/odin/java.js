@@ -77,15 +77,15 @@
 // // taco.capitalizeString();
 // taco.printString();
 
-const numberCreator = () => {
-  let num = 0;
-  return () => {
-    console.log(num);
-    num++;
-  };
-};
+// const numberCreator = () => {
+//   let num = 0;
+//   return () => {
+//     console.log(num);
+//     num++;
+//   };
+// };
 
-const num2 = numberCreator();
+// const num2 = numberCreator();
 
 // const Player = (name, level) => {
 //   let health = level *2;
@@ -150,22 +150,22 @@ const num2 = numberCreator();
 // // Note, only string wrappers can have own enumerable properties.
 // console.log(obj); // { "0": "a", "1": "b", "2": "c" }
 
-function Book(name, author, page) {
-  this.name = name;
-  this.author = author;
-  this.page = page;
-}
+// function Book(name, author, page) {
+//   this.name = name;
+//   this.author = author;
+//   this.page = page;
+// }
 
-Book.prototype.changeName = function (name) {
-  this.name = name;
-  return this.name;
-};
+// Book.prototype.changeName = function (name) {
+//   this.name = name;
+//   return this.name;
+// };
 
-const newBook = new Book("test", "test", 213);
+// const newBook = new Book("test", "test", 213);
 
-const myLibrary = [];
+// const myLibrary = [];
 
-myLibrary.push(newBook);
+// myLibrary.push(newBook);
 
 /// //////////////////
 
@@ -183,87 +183,82 @@ myLibrary.push(newBook);
 
 // import Events from 'eventemitter3';
 
-const rawMixin = function () {
-  const attrs = {};
+// const rawMixin = function () {
+//   const attrs = {};
 
-  return Object.assign(this, {
-    set(name, value) {
-      attrs[name] = value;
+//   return Object.assign(this, {
+//     set(name, value) {
+//       attrs[name] = value;
 
-      this.emit("change", {
-        prop: name,
-        value,
-      });
-    },
+//       this.emit("change", {
+//         prop: name,
+//         value,
+//       });
+//     },
 
-    get(name) {
-      return attrs[name];
-    },
-  });
-};
+//     get(name) {
+//       return attrs[name];
+//     },
+//   });
+// };
 
-const mixinModel = (target) => rawMixin.call(target);
+// const mixinModel = (target) => rawMixin.call(target);
 
-const george = { name: "george" };
-const model = mixinModel(george);
+// const george = { name: "george" };
+// const model = mixinModel(george);
 
 // model.on('change', data => console.log(data));
 
 // model.set('name', 'Sam');
 
-const greeting = (function sayHello() {
-  const text = "world";
-  const public2 = "I am public";
+// const greeting = (function sayHello() {
+//   const text = "world";
+//   const public2 = "I am public";
 
-  function _privateMethod() {
-    console.log(`Hello Up-skilling ${text}`);
-  }
+//   function _privateMethod() {
+//     console.log(`Hello Up-skilling ${text}`);
+//   }
 
-  function publicMethod() {
-    _privateMethod();
-  }
-  return {
-    public2,
-    publicMethod,
-  };
-})();
-greeting.publicMethod();
+//   function publicMethod() {
+//     _privateMethod();
+//   }
+//   return {
+//     public2,
+//     publicMethod,
+//   };
+// })();
+// greeting.publicMethod();
 
-const Formatter = (() => {
-  const log = (message) =>  `[${Date.now()}] Logger: ${message}`;
+// const Formatter = (() => {
+//   const log = (message) =>  `[${Date.now()}] Logger: ${message}`;
 
+//   const makeUppercase = (text) => {
+//     log("Making uppercase");
+//     return text.toUpperCase();
+//   };
+//   // const setTimeRun = () => {
+//   //   log("Setting times run");
+//   //   ++timesRun;
+//   // };
 
-  const makeUppercase = (text) => {
-    log("Making uppercase");
-    return text.toUpperCase();
-  };
-  // const setTimeRun = () => {
-  //   log("Setting times run");
-  //   ++timesRun;
-  // };
-
-  const writeTODOM = (selector, message) => {
-    document.querySelector(selector).innerHTML = log(message);
-  }
-  return {
-    makeUppercase,
-    writeTODOM,
-  };
-})();
+//   const writeTODOM = (selector, message) => {
+//     document.querySelector(selector).innerHTML = log(message);
+//   }
+//   return {
+//     makeUppercase,
+//     writeTODOM,
+//   };
+// })();
 
 // console.log(Formatter.makeUppercase("hello"));
 // console.log(Formatter.timesRun);
-
 
 // console.log(Formatter.timesRun);
 // console.log(Formatter.makeUppercase("hello"));
 
 // console.log(Formatter.timesRun.length);
 
-Formatter.writeTODOM('#target', 'Hi Up-skilling World!');
-
-
-
+// Formatter.writeTODOM('#target', 'Hi Up-skilling World!');
 
 // const Player = (() => {
 //   const nickName = name;
@@ -274,3 +269,14 @@ Formatter.writeTODOM('#target', 'Hi Up-skilling World!');
 //   }
 //   return {intro}
 // }) ();
+
+const reporter = ((user, car, location, situation) => {
+  const report = () =>
+    `Hi im ${user}, my car is a ${car}. I'm at ${location} and the traffic here is ${situation}.`;
+  return {report};
+}) ();
+
+const traffic = (user, car, location, situation) => {
+ const report = reporter(user, car, location, situation);
+  return { user, car, location, situation, ...report}
+};
