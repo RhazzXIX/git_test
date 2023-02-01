@@ -205,3 +205,20 @@ Promise.race([promise1, promise2, promise3, promise4]).then(function(one) {
 }).catch(function(one,two) {
   console.log('catch', one, two);
 })
+
+let name1;
+
+setTimeout(() => {
+  name1 = 'Skill'
+}, 5000)
+
+new Promise(function(resolve,reject) {
+  setInterval(() => {
+    if (!name1) reject(Error('still undefined'));
+    if (name1 !== undefined) resolve(name1)
+  }, 6000)
+}).then(name1 => console.log(name1))
+.catch(error => console.log(error))
+
+
+console.log(name1)
